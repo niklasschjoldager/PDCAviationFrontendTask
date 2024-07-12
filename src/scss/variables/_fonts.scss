@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../../public/NunitoSans-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("../../../public/NunitoSans-SemiBold.woff") format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+$font-primary: "Nunito Sans", "Arial", "Helvetica Neue", sans-serif;

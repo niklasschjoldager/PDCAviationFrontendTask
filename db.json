@@ -1,0 +1,12 @@
+{
+  "todos": [
+    {
+      "id": 1,
+      "text": "Købe ind",
+      "completed": false,
+      "notes": "Mælk, Æg, Sukker"
+    },
+    { "id": 2, "text": "Ring til mor", "completed": false, "notes": "" },
+    { "id": 3, "text": "Gå på arbejde", "completed": false, "notes": "" }
+  ]
+}
