@@ -1,46 +1,52 @@
-# Getting Started with Create React App
+# PDC Frontend Opgave
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Formålet
 
-## Available Scripts
+Denne app er et led i PDC's ansættelsesprocedure. Målet er at teste en ny frontend medarbejder i React og se hvordan nogle af de problemstillinger der fremstilles bliver løst.
 
-In the project directory, you can run:
+Det er ikke et krav at nå alt og der er ikke noget rigtig eller forkert. Brug 2-3 timer på det.
 
-### `npm start`
+## Opgaven
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Du skal lave en simpel app der viser en liste af lufthavne.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Vis en liste af lufthavne fra backenden (se afsnittet [Backend](#backend))
+1. Style listen med SCSS.
+1. Man skal kunne tilføje en ny lufthavn.
+1. Man skal kunne slette en lufthavn.
+1. Man skal kunne søge/filtrere i listen.
+1. Hvis du har tid: Tilføj mulighed for editering af lufthavne.
 
-### `npm test`
+Følg gerne dette designbrief - det behøver dog ikke matche 100%:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Værd at bemærke
 
-### `npm run build`
+- Der er allerede lavet et begyndende udkast til hvordan data fra backenden kan hentes (se `api.ts`) - du vælger selv om du vil arbejde videre med den eller en anden løsning.
+- Husk, det vigtige er ikke hvordan du løser opgaven. Det vigtige er at du kan forklare hvorfor du har valgt at løse opgaven på den måde du har.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Backend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Det hele skal gemmes i en backend. Her har du en JSON Server tilgængelig.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+En JSON Server skal blot startes, og så overvåger den en db.json fil og exposer samtidigt de nødvendige endpoints.
 
-### `npm run eject`
+Du kan starte serveren ved at køre:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```
+npm run backend
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Serveren kører på port http://localhost:5000 (porten kan ændres i package.json).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Endpoints tilgængelig er:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```
+GET    /airports
+GET    /airports/<id>
+POST   /airports
+PUT    /airports/<id>
+PATCH  /airports/<id>
+DELETE /airports/<id>
+```
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Du kan se flere detaljer om de tilgængelige endpoints her: [https://github.com/typicode/json-server](https://github.com/typicode/json-server#routes)

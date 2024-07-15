@@ -1,12 +1,19 @@
 {
-  "todos": [
+  "airports": [
     {
       "id": 1,
-      "text": "Købe ind",
-      "completed": false,
-      "notes": "Mælk, Æg, Sukker"
+      "iata": "CPH",
+      "name": "Copenhagen Airport"
     },
-    { "id": 2, "text": "Ring til mor", "completed": false, "notes": "" },
-    { "id": 3, "text": "Gå på arbejde", "completed": false, "notes": "" }
+    {
+      "id": 2,
+      "iata": "RNN",
+      "name": "Bornholms Lufthavn"
+    },
+    {
+      "id": 3,
+      "iata": "LHR",
+      "name": "London Heathrow Airport"
+    }
   ]
 }
