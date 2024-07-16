@@ -1,15 +1,19 @@
-import React from 'react';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
 import './App.scss';
-import { apiGetAirports } from './api';
 import Airports from './components/Airports';
 
-const App = () => {
-  const data = apiGetAirports();
+const queryClient = new QueryClient();
 
+const App = () => {
   return (
-    <div className="App">
-      <Airports />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div className="App">
+        <Airports />
+        <ReactQueryDevtools />
+      </div>
+    </QueryClientProvider>
   );
 };
 
