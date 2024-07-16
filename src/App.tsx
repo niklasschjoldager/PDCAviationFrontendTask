@@ -1,8 +1,16 @@
 import React from 'react';
 import './App.scss';
+import { apiGetAirports } from './api';
+import Airports from './components/Airports';
 
-const App: React.FC = () => {
-  return <div className="App">Insert Airport list here</div>;
+const App = () => {
+  const data = apiGetAirports();
+
+  return (
+    <div className="App">
+      <Airports />
+    </div>
+  );
 };
 
 export default App;
