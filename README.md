@@ -10,19 +10,31 @@ Det er ikke et krav at nå alt og der er ikke noget rigtig eller forkert. Brug 2
 
 Du skal lave en simpel app der viser en liste af lufthavne.
 
-1. Vis en liste af lufthavne fra backenden (se afsnittet [Backend](#backend))
-1. Style listen med SCSS.
+1. Vis en liste af lufthavne fra backenden (se afsnittet [Backend](#backend)).
+1. Style listen med SCSS (se afsnittet [Design brief](#design-brief)).
 1. Man skal kunne tilføje en ny lufthavn.
 1. Man skal kunne slette en lufthavn.
 1. Man skal kunne søge/filtrere i listen.
 1. Hvis du har tid: Tilføj mulighed for editering af lufthavne.
 
-Følg gerne dette designbrief - det behøver dog ikke matche 100%:
-
 ## Værd at bemærke
 
 - Der er allerede lavet et begyndende udkast til hvordan data fra backenden kan hentes (se `api.ts`) - du vælger selv om du vil arbejde videre med den eller en anden løsning.
 - Husk, det vigtige er ikke hvordan du løser opgaven. Det vigtige er at du kan forklare hvorfor du har valgt at løse opgaven på den måde du har.
+
+## Design brief
+
+Følg gerne dette design brief (`./design-brief.png`) - det behøver dog ikke matche 100%:
+
+<img src="./design-brief.png" width="600">
+
+### Farver
+
+- Baggrundsfarve: #F3F3F3
+- Primær font farve + ikoner: #2F2F2F
+- Sekundær font farve: #979797
+- Label font farve: #1F6EA2
+- Knap farve: #277CB4
 
 ## Backend
 
