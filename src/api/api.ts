@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const apiUrl = 'http://localhost:5000';
+const API_URL = 'http://localhost:1234';
 
 export interface Airport {
   id: number;
@@ -10,7 +10,7 @@ export interface Airport {
 
 export async function apiGetAirports(): Promise<Airport[]> {
   try {
-    const response = await axios.get<Airport[]>(`${apiUrl}/airports`);
+    const response = await axios.get<Airport[]>(`${API_URL}/airports`);
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);
