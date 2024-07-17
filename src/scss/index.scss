@@ -1,3 +1,4 @@
-@import "./reset.scss";
-@import "./variables/variables";
-@import "./variables/fonts";
+@use "variables";
+@use "./reset.scss";
+@use "./global.scss";
+@use "utilities";

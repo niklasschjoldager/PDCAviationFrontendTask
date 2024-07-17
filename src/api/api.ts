@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:1234';
 
-type Airport = {
+export type Airport = {
   id: number;
   iata: string;
   name: string;

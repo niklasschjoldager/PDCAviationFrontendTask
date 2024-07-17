@@ -1,5 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import { getAirports } from '../../api';
+import styles from './Airports.module.scss';
+import Airport from '../Airport';
 
 function Airports() {
   const { isPending, isError, data } = useQuery({
@@ -16,14 +18,11 @@ function Airports() {
   }
 
   return (
-    <>
-      <h2>Airports</h2>
-      <ul>
-        {data.map((airport) => {
-          return <li>{airport.name}</li>;
-        })}
-      </ul>
-    </>
+    <ul className={styles.airports}>
+      {data.map(({ id, iata, name }) => (
+        <Airport key={id} id={id} iata={iata} name={name} />
+      ))}
+    </ul>
   );
 }
 

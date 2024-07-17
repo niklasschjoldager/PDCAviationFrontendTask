@@ -1,0 +1,8 @@
+.container {
+  --gutter: 1rem;
+  --max-width: 320px;
+  max-width: calc(var(--max-width) + var(--gutter));
+  padding-inline: var(--gutter);
+  margin-inline: auto;
+  padding-block: 32px;
+}

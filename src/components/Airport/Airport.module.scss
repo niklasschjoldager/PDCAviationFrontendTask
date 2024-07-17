@@ -1,0 +1,17 @@
+.airport {
+  padding-block: 1rem;
+  border-block-end: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  
+  &:last-child {
+    border-block-end: none;
+  }
+
+  &__abbreviation {
+    text-decoration: none;
+    color: var(--secondary-color);
+  }
+}

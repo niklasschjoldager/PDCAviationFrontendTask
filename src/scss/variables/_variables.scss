@@ -1,13 +1,23 @@
 $background-color: #F3F3F3;
+$border-color: #e2e2e2;
+$button-color: #277CB4;
+$label-color: #1F6EA2;
 $primary-color: #2F2F2F;
 $secondary-color: #979797;
-$label-color: #1F6EA2;
-$button-color: #277CB4;
+$white: #ffffff;
+
+$border-rounded: 6px;
+$border-rounded-full: 9999px;
 
 :root {
   --background-color: #{$background-color};
+  --border-color: #{$border-color};
+  --button-color: #{$button-color};
+  --label-color: #{$label-color};
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
-  --label-color: #{$label-color};
-  --button-color: #{$button-color};
+  --white: #{$white};
+
+  --rounded: #{$border-rounded};
+  --rounded-full: #{$border-rounded-full};
 }
