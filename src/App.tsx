@@ -1,11 +1,20 @@
 import Airports from './components/Airports';
 import styles from './App.module.scss';
+import Button from './components/Button';
 
 const App = () => {
   return (
     <main className={styles.container}>
-      <h2>Airports</h2>
-      <Airports />
+      <section>
+        <header>
+          <h2>Airports</h2>
+        </header>
+        <Airports />
+      </section>
+      <section>
+        <h2>New airport</h2>
+        <Button>Save</Button>
+      </section>
     </main>
   );
 };
