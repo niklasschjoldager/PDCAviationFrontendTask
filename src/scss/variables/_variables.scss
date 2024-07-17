@@ -1,0 +1,13 @@
+$background-color: #F3F3F3;
+$primary-color: #2F2F2F;
+$secondary-color: #979797;
+$label-color: #1F6EA2;
+$button-color: #277CB4;
+
+:root {
+  --background-color: #{$background-color};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --label-color: #{$label-color};
+  --button-color: #{$button-color};
+}
