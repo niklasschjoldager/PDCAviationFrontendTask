@@ -6,3 +6,21 @@
   margin-inline: auto;
   padding-block: 32px;
 }
+
+.section {
+  padding-block-end: 1.5rem;
+
+  & + .section {
+    padding-block-end: 0rem;
+  }
+
+  &__header {
+    margin-block-end: 0.5rem;
+  }
+
+  &__content {
+    border-radius: var(--rounded);
+    background-color: var(--white);
+    padding: 1rem;
+  }
+}

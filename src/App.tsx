@@ -1,19 +1,20 @@
 import Airports from './components/Airports';
 import styles from './App.module.scss';
-import Button from './components/Button';
+import AirportForm from './components/Airport/AirportForm';
 
 const App = () => {
   return (
     <main className={styles.container}>
-      <section>
-        <header>
+      <section className={styles.section}>
+        <header className={styles.section__header}>
           <h2>Airports</h2>
         </header>
-        <Airports />
+        <div className={styles.section__content}>
+          <Airports />
+        </div>
       </section>
-      <section>
-        <h2>New airport</h2>
-        <Button>Save</Button>
+      <section className={styles.section}>
+        <AirportForm />
       </section>
     </main>
   );

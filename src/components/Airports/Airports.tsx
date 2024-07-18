@@ -1,3 +1,5 @@
+import { CgSpinner } from 'react-icons/cg';
+import { MdErrorOutline } from 'react-icons/md';
 import { useQuery } from '@tanstack/react-query';
 import { getAirports } from '../../api';
 import styles from './Airports.module.scss';
@@ -13,21 +15,41 @@ function Airports() {
     queryFn: getAirports,
   });
 
-  if (isPending) {
-    return <p>Loading airports...</p>;
+  if (isError) {
+    return (
+      <Message>
+        <MdErrorOutline /> Whoops, an error has occured.
+      </Message>
+    );
   }
 
-  if (isError) {
-    return <p>Whoops, an error has occured.</p>;
+  if (isPending) {
+    return (
+      <Message>
+        <CgSpinner /> Loading airports...
+      </Message>
+    );
+  }
+
+  if (airports?.length === 0) {
+    return <Message>No airports added.</Message>;
   }
 
   return (
-    <ul className={styles.airports}>
-      {airports.map(({ id, iata, name }) => (
+    <ul>
+      {airports?.map(({ id, iata, name }) => (
         <Airport key={id} id={id} iata={iata} name={name} />
       ))}
     </ul>
   );
+}
+
+type MessageProps = {
+  children: React.ReactNode;
+};
+
+function Message({ children }: MessageProps) {
+  return <p className={styles.message}>{children}</p>;
 }
 
 export default Airports;

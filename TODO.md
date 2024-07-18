@@ -1,17 +1,20 @@
 # TODO List
 
 ## Todo
-- [ ] Styling
-  - [ ] Add design tokens from project description as variables
-- [ ] AirportList
+- [x] Styling
+  - [x] Add design tokens from project description as variables
+- [x] AirportList
+  - [x] Show no airports message
   - [x] Show all airports
-  - [ ] Style
+  - [x] Style
 - [ ] CreateAirport
   - [ ] Add a new airport
   - [ ] Style
+  - [ ] Success message
 - [ ] Delete an airport
-  - [ ] Add button to Airport list item
-  - [ ] Style airport list item
+  - [x] Add button to Airport list item
+  - [x] Style airport list item
+  - [ ] Success message
 - [ ] AirportSearch
   - [ ] Search / filter in the list of airports
   - [ ] Style search field

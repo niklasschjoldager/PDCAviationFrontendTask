@@ -1,6 +1,10 @@
-.airports {
-  border-radius: var(--rounded);
-  background-color: var(--white);
-  list-style: none;
-  padding: 1rem;
+.message {
+  display: flex;
+  gap: 0.50rem;
+  align-items: center;
+
+  & svg {
+    width: 24px;
+    height: 24px;
+  }
 }
