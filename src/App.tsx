@@ -1,6 +1,6 @@
 import Airports from './components/Airports';
+import CreateAirportForm from './components/CreateAirportForm/';
 import styles from './App.module.scss';
-import AirportForm from './components/Airport/AirportForm';
 
 const App = () => {
   return (
@@ -14,7 +14,7 @@ const App = () => {
         </div>
       </section>
       <section className={styles.section}>
-        <AirportForm />
+        <CreateAirportForm />
       </section>
     </main>
   );

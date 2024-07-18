@@ -11,7 +11,7 @@ export interface Airport extends AirportID {
   name: string;
 }
 
-type PostAirport = Omit<Airport, 'id'>;
+export type PostAirport = Omit<Airport, 'id'>;
 
 export async function getAirports(): Promise<Airport[] | []> {
   return await fetcher('/airports', 'get');
