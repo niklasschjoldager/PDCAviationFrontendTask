@@ -2,11 +2,14 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:1234';
 
-export type Airport = {
+export interface AirportID {
   id: number;
+}
+
+export interface Airport extends AirportID {
   iata: string;
   name: string;
-};
+}
 
 type PostAirport = Omit<Airport, 'id'>;
 
@@ -20,6 +23,10 @@ export async function getAirport(id: number): Promise<Airport> {
 
 export async function postAirport(): Promise<PostAirport> {
   return await fetchData<Airport>('/airports', 'post');
+}
+
+export async function deleteAirport(id: number): Promise<Airport> {
+  return await fetchData(`/airports/${id}`, 'delete');
 }
 
 async function fetchData<T>(

@@ -4,7 +4,11 @@ import styles from './Airports.module.scss';
 import Airport from '../Airport';
 
 function Airports() {
-  const { isPending, isError, data } = useQuery({
+  const {
+    isPending,
+    isError,
+    data: airports,
+  } = useQuery({
     queryKey: ['airports'],
     queryFn: getAirports,
   });
@@ -19,7 +23,7 @@ function Airports() {
 
   return (
     <ul className={styles.airports}>
-      {data.map(({ id, iata, name }) => (
+      {airports.map(({ id, iata, name }) => (
         <Airport key={id} id={id} iata={iata} name={name} />
       ))}
     </ul>

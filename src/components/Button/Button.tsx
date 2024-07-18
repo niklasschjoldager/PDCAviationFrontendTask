@@ -1,9 +1,9 @@
 import { ReactNode } from 'react';
 import styles from './Button.module.scss';
 
-type ButtonProps = {
+interface ButtonProps extends React.ComponentPropsWithoutRef<'button'> {
   children: ReactNode;
-};
+}
 
 function Button({ children, ...rest }: ButtonProps) {
   return (
