@@ -1,9 +1,11 @@
 $background-color: #F3F3F3;
 $border-color: #e2e2e2;
 $button-color: #277CB4;
+$error-color: #ef4444;
 $label-color: #1F6EA2;
 $primary-color: #2F2F2F;
 $secondary-color: #979797;
+$success-color: #22c55e;
 $white: #ffffff;
 
 $border-rounded: 6px;
@@ -13,9 +15,11 @@ $border-rounded-full: 9999px;
   --background-color: #{$background-color};
   --border-color: #{$border-color};
   --button-color: #{$button-color};
+  --error-color: #{$error-color};
   --label-color: #{$label-color};
   --primary-color: #{$primary-color};
   --secondary-color: #{$secondary-color};
+  --success-color: #{$success-color};
   --white: #{$white};
 
   --rounded: #{$border-rounded};

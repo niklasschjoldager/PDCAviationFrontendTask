@@ -1,9 +1,9 @@
 .airport {
   padding-block: 1rem;
   border-block-end: 1px solid var(--border-color);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
   align-items: center;
+  grid-template-columns: auto max-content;
   gap: 1rem;
   
   &:last-child {
@@ -17,5 +17,10 @@
 
   &__delete-button {    
     padding: 0.5rem;
+  }
+
+  &__delete-icon {
+    width: 20px;
+    height: 20px;
   }
 }

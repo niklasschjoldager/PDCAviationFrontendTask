@@ -32,7 +32,7 @@ function Airport({ id, iata, name }: AirportProps) {
           mutation.mutate(id);
         }}>
         <span className="sr-only">{removeMessage}</span>
-        <FiTrash2 />
+        <FiTrash2 className={styles['airport__delete-icon']} />
       </button>
     </li>
   );

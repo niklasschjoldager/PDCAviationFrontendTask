@@ -7,19 +7,19 @@
   - [x] Show no airports message
   - [x] Show all airports
   - [x] Style
-- [ ] CreateAirport
-  - [ ] Add a new airport
-  - [ ] Style
-  - [ ] Success message
-- [ ] Delete an airport
+- [x] CreateAirport
+  - [x] Add a new airport
+  - [x] Style
+- [x] Delete an airport
   - [x] Add button to Airport list item
   - [x] Style airport list item
-  - [ ] Success message
 - [ ] AirportSearch
   - [ ] Search / filter in the list of airports
   - [ ] Style search field
 
 ## Nice to have
+- [ ] Create airport success message
+- [ ] Delete airport Success message
 - [ ] Delete airport confirmation popup
   - [ ] Create popup 
   - [ ] Style popup 
