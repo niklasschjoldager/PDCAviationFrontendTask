@@ -14,6 +14,16 @@
       "id": 3,
       "iata": "LHR",
       "name": "London Heathrow Airport"
+    },
+    {
+      "id": 4,
+      "iata": "LAX",
+      "name": "Los Angeles International Airport"
+    },
+    {
+      "id": 5,
+      "iata": "DXB",
+      "name": "Dubai International Airport"
     }
   ]
 }

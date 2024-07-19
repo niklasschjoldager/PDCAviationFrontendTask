@@ -1,10 +1,10 @@
 import { CgSpinner } from 'react-icons/cg';
 import { MdErrorOutline } from 'react-icons/md';
 import { keepPreviousData, useQuery } from '@tanstack/react-query';
+import { useDebounce } from '@uidotdev/usehooks';
 import { getAirports } from '../../api';
 import styles from './Airports.module.scss';
 import Airport from '../Airport';
-import { useDebounce } from '@uidotdev/usehooks';
 
 type AirportsProps = {
   query: string;

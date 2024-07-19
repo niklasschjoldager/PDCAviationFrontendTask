@@ -92,7 +92,7 @@ function CreateAirportForm() {
             })}
             aria-invalid={errors.iata ? 'true' : 'false'}
             type="text"
-            className={styles['form-field__input']}
+            className={`${styles['form-field__input']} ${styles['form-field__input--uppercase']}`}
           />
           {errors.iata && (
             <p className={styles['form-field__error-message']} role="alert">
