@@ -2,11 +2,8 @@ import axios from 'axios';
 
 const API_URL = 'http://localhost:1234';
 
-export interface AirportID {
+export interface Airport {
   id: number;
-}
-
-export interface Airport extends AirportID {
   iata: string;
   name: string;
 }
@@ -14,9 +11,9 @@ export interface Airport extends AirportID {
 export type PostAirport = Omit<Airport, 'id'>;
 
 export async function getAirports(query: string = ''): Promise<Airport[] | []> {
-  const queryBuilder = query ? `?q=${query}` : '';
+  const queryBuilder = query ? `&q=${query}` : '';
 
-  return await fetcher(`/airports${queryBuilder}`, 'get');
+  return await fetcher(`/airports?_sort=name${queryBuilder}`, 'get');
 }
 
 export async function getAirport(id: number): Promise<Airport> {
