@@ -1,19 +1,30 @@
 import { CgSpinner } from 'react-icons/cg';
 import { MdErrorOutline } from 'react-icons/md';
-import { useQuery } from '@tanstack/react-query';
+import { keepPreviousData, useQuery } from '@tanstack/react-query';
 import { getAirports } from '../../api';
 import styles from './Airports.module.scss';
 import Airport from '../Airport';
+import { useDebounce } from '@uidotdev/usehooks';
 
-function Airports() {
+type AirportsProps = {
+  query: string;
+};
+
+function Airports({ query }: AirportsProps) {
+  const debouncedQuery = useDebounce(query, 500);
+
   const {
     isPending,
     isError,
     data: airports,
   } = useQuery({
-    queryKey: ['airports'],
-    queryFn: getAirports,
+    queryKey: ['airports', debouncedQuery],
+    queryFn: () => getAirports(debouncedQuery),
+    placeholderData: keepPreviousData,
   });
+
+  const isNoSearchResultFound = airports?.length === 0 && query;
+  const isNoAirportAdded = airports?.length === 0 && !query;
 
   if (isError) {
     return (
@@ -31,7 +42,11 @@ function Airports() {
     );
   }
 
-  if (airports?.length === 0) {
+  if (isNoSearchResultFound) {
+    return <Message>No airport matches your search for "{query}"</Message>;
+  }
+
+  if (isNoAirportAdded) {
     return <Message>No airports added.</Message>;
   }
 

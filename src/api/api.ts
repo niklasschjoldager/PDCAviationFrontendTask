@@ -13,8 +13,10 @@ export interface Airport extends AirportID {
 
 export type PostAirport = Omit<Airport, 'id'>;
 
-export async function getAirports(): Promise<Airport[] | []> {
-  return await fetcher('/airports', 'get');
+export async function getAirports(query: string = ''): Promise<Airport[] | []> {
+  const queryBuilder = query ? `?q=${query}` : '';
+
+  return await fetcher(`/airports${queryBuilder}`, 'get');
 }
 
 export async function getAirport(id: number): Promise<Airport> {
